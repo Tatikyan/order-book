@@ -1,0 +1,82 @@
+.G-container {
+  max-width : 800px;
+  width     : 100%;
+  margin    : 0 auto;
+
+  ul {
+    li {
+      width   : 20%;
+      padding : 3px;
+    }
+  }
+
+  .P-table-header {
+    border-bottom    : 1px solid rgba(0, 0, 0, 0.3);
+    background-color : rgba(0, 0, 0, 0.1);
+
+    ul {
+      li {
+        position : relative;
+        border   : 1px solid black;
+        padding  : 5px;
+        cursor   : pointer;
+
+        &:before {
+          content       : '';
+          position      : absolute;
+          width         : 5px;
+          height        : 5px;
+          border        : none;
+          border-left   : 2px solid black;
+          border-bottom : 2px solid black;
+          right         : 10px;
+          top           : 10px;
+          transform     : rotate(-45deg);
+        }
+
+        &.P-up {
+          &:before {
+            transform : rotate(135deg);
+
+          }
+        }
+      }
+
+    }
+  }
+
+  .P-table-body {
+    ul {
+      transition : 0.3s;
+      cursor     : pointer;
+
+      &:hover {
+        background-color : rgba(0, 0, 0, 0.1);
+      }
+
+      li {
+        padding          : 5px;
+        border           : 1px solid rgba(0, 0, 0, 0.1);
+        background-color : rgba(0, 0, 0, 0.67);
+        color            : #ffffff;
+      }
+    }
+
+    .up li {
+      background-color : #02C076;
+    }
+
+    .down li {
+      background-color : #ff0000;
+    }
+  }
+}
+
+.P-show-all-brn {
+  background-color : #096ec7;
+  width            : 120px;
+  height           : 35px;
+  margin           : 30px 0;
+  border-radius    : 30px;
+  color            : white;
+}
